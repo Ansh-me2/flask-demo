@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action = "#" method="post">
+    <div class="form-group row">
+        <label for="mail" class="col-sm-2 col-form-label">PUB_ID</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" id="PUB_ID" PUB_ID="PUB_ID" value={{PUBLISHER.PUB_ID}}>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="mail" class="col-sm-2 col-form-label">PUB_NAME</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="PUB_NAME" PUB_NAME="PUB_NAME" value={{PUBLISHER.PUB_NAME}}>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="mail" class="col-sm-2 col-form-label">ADDRESS</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="ADDRESS" ADDRESS="ADDRESS" value={{ADDRESS.PUBLISHER}}>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="mail" class="col-sm-2 col-form-label">PHONE_NO</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="PHONE_NO" PHONE_NO="PHONE_NO" value={{PUBLISHER.PHONE_NO}}>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="mail" class="col-sm-2 col-form-label">COMMISSION</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" id="COMMISSION" COMMISSION="COMMISSION" value={{PUBLISHER.COMMISSION}}>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+</form>
+{% endblock %}

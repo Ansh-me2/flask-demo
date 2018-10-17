@@ -5,33 +5,33 @@
     <div class="form-group row">
         <label for="mail" class="col-sm-2 col-form-label">GAME_ID</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="GAME_ID" GAME_ID="GAME_ID" value={{GAME.GAME_ID}}>
+            <input type="number" class="form-control" id="GAME_ID" name="GAME_ID" value={{GAME.GAME_ID}}>
         </div>
     </div>
     <div class="form-group row">
         <label for="mail" class="col-sm-2 col-form-label">GAME_NAME</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="GAME_NAME" GAME_NAME="GAME_NAME" value={{GAME.GAME_NAME}}>
+            <input type="text" class="form-control" id="GAME_NAME" name="GAME_NAME" value={{GAME.GAME_NAME}}>
         </div>
     </div>
     <div class="form-group row">
         <label for="mail" class="col-sm-2 col-form-label">PUBLISHER</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="PUBLISHER" PUBLISHER="PUBLISHER" value={{GAME.PUBLISHER}}>
+            <input type="text" class="form-control" id="PUBLISHER" name="PUBLISHER" value={{GAME.PUBLISHER}}>
         </div>
     </div>
     <div class="form-group row">
         <label for="mail" class="col-sm-2 col-form-label">SIZE</label>
         <div class="col-sm-10">
-            <input type="number" class="form-control" id="SIZE" SIZE="SIZE" value={{GAME.SIZE}}>
+            <input type="number" class="form-control" id="SIZE" name="SIZE" value={{GAME.SIZE}}>
         </div>
     </div>
     <div class="form-group row">
         <label for="mail" class="col-sm-2 col-form-label">PRICE</label>
         <div class="col-sm-10">
-            <input type="number" class="form-control" id="PRICE" PRICE="PRICE" value={{GAME.PRICE}}>
+            <input type="number" class="form-control" id="PRICE" name="PRICE" value={{GAME.PRICE}}>
         </div>
     </div>
-    <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+    <button type="submit" class="btn btn-primary mystyle" value="Submit">Submit</button>
 </form>
 {% endblock %}

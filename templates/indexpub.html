@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Publisher Details{% endblock %}
+
+{% block content %}
+<table class="table">
+	<thead>
+		<tr>
+			<th scope="col">PUB_ID</th>
+			<th scope="col">PUB_NAME</th>
+			<th scope="col">ADDRESS</th>
+			<th scope="col">PHONE_NO</th>
+			<th scope="col">COMMISSION</th>
+			<!-- <th scope="col">Mentor</th> --> -->
+			<th scope="col">Update</th>
+		</tr>
+	</thead>
+	{% for PUBLISHER in pub_list: %}
+	<tr>
+		<td>{{ PUBLISHER["PUB_ID"] }}</td>
+		<td>{{ PUBLISHER["PUB_NAME"] }}</td>
+		<td>{{ PUBLISHER["ADDRESS"] }}</td>
+		<td>{{ PUBLISHER["PHONE_NO"] }}</td>
+		<td>{{ PUBLISHER["COMMISSION"] }}</td>
+		<td>
+			<a class="btn btn-warning btn-sm" href="./updatepub/{{PUBLISHER.PUB_ID}}"><i class="fa fa-pencil"></i></a>
+			<a class="btn btn-danger btn-sm" href="./deletepub/{{PUBLISHER.PUB_ID}}"><i class="fa fa-trash"></i></a>
+		</td>
+
+	</tr>
+	{% endfor %}
+</table>
+<a class="btn btn-primary" href="./createpub"><i class="fa fa-plus"></i></a>
+{% endblock %}

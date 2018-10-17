@@ -1,31 +1,30 @@
 {% extends "base.html" %}
 
-{% block title %}Student Details{% endblock %}
+{% block title %}Game Details{% endblock %}
 
 {% block content %}
 <table class="table">
 	<thead>
 		<tr>
-			<th scope="col">USN</th>
-			<th scope="col">Name</th>
-			<th scope="col">Semester</th>
-			<th scope="col">Age</th>
-			<th scope="col">Section</th>
-			<th scope="col">Mentor</th>
+			<th scope="col">GAME_ID</th>
+			<th scope="col">GAME_NAME</th>
+			<th scope="col">PUBLISHER</th>
+			<th scope="col">SIZE(in GB)</th>
+			<th scope="col">PRICE</th>
+			<!-- <th scope="col">Mentor</th> --> -->
 			<th scope="col">Update</th>
 		</tr>
 	</thead>
-	{% for student in student_list: %}
+	{% for GAME in game_list: %}
 	<tr>
-		<td>{{ student["USN"] }}</td>
-		<td>{{ student["Name"] }}</td>
-		<td>{{ student["Semester"] }}</td>
-		<td>{{ student["Age"] }}</td>
-		<td>{{ student["Section"] }}</td>
-		<td>{{ student["Mentor"] }}</td>
+		<td>{{ GAME["GAME_ID"] }}</td>
+		<td>{{ GAME["GAME_NAME"] }}</td>
+		<td>{{ GAME["PUBLISHER"] }}</td>
+		<td>{{ GAME["SIZE"] }}</td>
+		<td>{{ GAME["PRICE"] }}</td>
 		<td>
-			<a class="btn btn-warning btn-sm" href="./update/{{student.USN}}"><i class="fa fa-pencil"></i></a>
-			<a class="btn btn-danger btn-sm" href="./delete/{{student.USN}}"><i class="fa fa-trash"></i></a>
+			<a class="btn btn-warning btn-sm" href="./update/{{GAME.GAME_ID}}"><i class="fa fa-pencil"></i></a>
+			<a class="btn btn-danger btn-sm" href="./delete/{{GAME.GAME_ID}}"><i class="fa fa-trash"></i></a>
 		</td>
 
 	</tr>
