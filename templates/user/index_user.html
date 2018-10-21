@@ -9,10 +9,6 @@
 			<th scope="col">USER_ID</th>
 			<th scope="col">USER_NAME</th>
 			<th scope="col">AGE</th>
-			<!-- <th scope="col">SIZE(in GB)</th>
-			<th scope="col">PRICE</th> -->
-			<!-- <th scope="col">Mentor</th> --> -->
-			<th scope="col">Update</th>
 		</tr>
 	</thead>
 	{% for USER in user_list: %}
@@ -20,11 +16,9 @@
 		<td>{{ USER["USER_ID"] }}</td>
 		<td>{{ USER["USER_NAME"] }}</td>
 		<td>{{ USER["AGE"] }}</td>
-		<!-- <td>{{ GAME["SIZE"] }}</td>
-		<td>{{ GAME["PRICE"] }}</td> -->
 		<td>
-			<a class="btn btn-warning btn-sm" href="./update/{{USER.USER_ID}}"><i class="fa fa-pencil"></i></a>
-			<a class="btn btn-danger btn-sm" href="./delete/{{USER.USER_ID}}"><i class="fa fa-trash"></i></a>
+			<a class="btn btn-warning btn-sm" href="./update_user/{{USER.USER_ID}}"><i class="fa fa-pencil"></i></a>
+			<a class="btn btn-danger btn-sm" href="./delete_user/{{USER.USER_ID}}"><i class="fa fa-trash"></i></a>
 		</td>
 
 	</tr>
